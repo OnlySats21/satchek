@@ -849,18 +849,18 @@ function calc() {
   document.getElementById('bd-sats').textContent   = satsPerDollar.toFixed(0) + ' sats / $';
 
   const lines = [
-    `₿ STACK VS SPEND`,``,
+    `⚡ SATCHEK`,``,
     `My ${freqLabel} "${label}" habit:`,
     `→ Total spent:       ${usd(totalUSD)} over ${years} yrs`,
     `→ Sats I could have: ${sats(btcAcc)}`,
     `→ Value by ${targetYear} @ ${cagr*100}% CAGR: ${usd(futureVal)}`,
-    ``,`Every sat counts. 🟠`,`— @aastack`
+    ``,`Every sat counts. 🟠`,`satchek.com · @aastack`
   ];
   document.getElementById('shareText').textContent = lines.join('\n');
 
   document.getElementById('tweetBtn').onclick = () => {
     const t = encodeURIComponent(
-      `My ${freqLabel} "${label}" habit costs me ${usd(futureVal)} in Bitcoin by ${targetYear}.\n\nEvery sat counts. 🟠\n\nCalculate yours 👇\nstackvsspend.vercel.app`
+      `My ${freqLabel} "${label}" habit costs me ${usd(futureVal)} in Bitcoin by ${targetYear}.\n\nEvery sat counts. 🟠\n\nCalculate yours 👇\nsatchek.com`
     );
     window.open('https://twitter.com/intent/tweet?text=' + t, '_blank');
   };
